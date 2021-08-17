@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <link rel="stylesheet" href="materialize.min.css">
+
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="materialize.min.js"></script>
+    <script src="p5.min.js"></script>
+    <script src="drawingMachine.js"></script>
+    <script src="graphCalculator.js"></script>
+
+  </head>
+  <body style="margin: 0; padding: 0; overflow: hidden;">
+      <div id="up" style="width: 15vw; height: 100vh; float: right; background-color: grey; color:white;">
+        <div style="padding: 8px">
+          Press <b>ESC</b> to disconnect path
+          <hr></hr>
+          <p style="margin-bottom: 1vh">Calculate the shortest route</p>
+
+          <div class="input-field col s8">
+            <input placeholder="From:" id="from" type="text">
+          </div>
+
+          <div class="input-field col s8">
+            <input placeholder="To:" id="to" type="text">
+          </div>
+
+          <button id="calculate" style="width: 100%; margin-top:1vh;" class="waves-effect waves-light btn">Calculate</button>
+          <hr></hr>
+          <p>Generate graph array from visualisation</p>
+          <button id="generate" style="width: 100%;" class="waves-effect waves-light btn">Generate</button>
+          <hr></hr>
+        </div>
+      </div>
+      
+      <div id="p5" style="width: 85vw; height: 100vh; float: left;"></div>
+      <script src="sketch.js"></script>
+  </body>
+</html>
